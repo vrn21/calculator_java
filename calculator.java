@@ -27,6 +27,7 @@ public class Calculator extends JFrame implements ActionListener {
 
     JPanel p2 = new JPanel();
     JButton opbuttons[] = new JButton[8];
+    p2.setLayout(new BoxLayout(p2,BoxLayout(p2).X_AXIS));
      
     for (int i = 0; i<8; i++){
       opbuttons[i] = new JButton(opfns[i]);
