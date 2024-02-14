@@ -73,12 +73,11 @@ class WordPrinter implements Runnable {
           System.out.println("" + t.getName());
         t.start();
         try{
-          Thread main = Thread.currentThread();
-          main.sleep(600);
+          t.join();
         }catch(Exception e){
-          e.printStackTrace();
+          System.out.println(e);
         }
-    }
+           }
 
     synchronized public void appendToFile(String filename, String content) {
         try {
